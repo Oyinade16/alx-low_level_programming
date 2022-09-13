@@ -1,7 +1,8 @@
 #include "main.h"
+#include <studio.h>
 
 /**
-* _abs - function that prints a absolute value of number
+* _abs - function that prints a absolute value of an integer
 *@c: takes in an integer
 * Return: 1 if greater than 0, 0 if zero and -1 if less than 0
  */
