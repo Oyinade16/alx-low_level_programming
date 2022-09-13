@@ -1,10 +1,10 @@
-#include "main.h" 
+#include "main.h"
 /**
 *main - Entry point
 *print_alphabet_x10 - to function to print abc 10 times
 *
 */
-void 
+void
 print_alphabet_x10(void)
 
 {
