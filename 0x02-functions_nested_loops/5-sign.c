@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-*print_sign - function to check for a sign of a number. 
+*print_sign - function to check for a sign of a number.
 *@n: The number of which sign will be printed
 * Return: 0
-*          
-*          
+*   
+*
 **/
 int print_sign(int n)
 {
