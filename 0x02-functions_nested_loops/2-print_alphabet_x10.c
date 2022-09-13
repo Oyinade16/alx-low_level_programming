@@ -1,7 +1,7 @@
 #include "main.h" 
 /**
 *main - Entry point
-*Printing lowercase alphabets 10 times
+*print_alphabet_x10 - to function to print abc 10 times
 *
 */
 void print_alphabet_x10(void)
