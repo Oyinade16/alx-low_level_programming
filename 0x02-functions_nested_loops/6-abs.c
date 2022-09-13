@@ -1,5 +1,4 @@
 #include "main.h"
-#include <studio.h>
 
 /**
 * _abs - function that prints a absolute value of an integer
