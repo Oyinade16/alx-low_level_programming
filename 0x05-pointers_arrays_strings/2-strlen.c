@@ -1,4 +1,3 @@
- (14 sloc)  203 Bytes
 #include "main.h"
 /**
  * _strlen - gets character string
