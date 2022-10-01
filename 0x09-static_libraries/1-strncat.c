@@ -1,17 +1,27 @@
-/**
- * _memcpy - copies from source to dest values in array
- * @dest: destination to copy to
- * @src: source to copy from
- * @n: n amount of times
- * Return: return the string value
- */
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
+#include "main.h"
 
-	for (i = 0; i < n; i++)
+/**
+ * _strncat - appends src to the dest string
+ * @dest: string to append by src
+ * @src: string to append to dest
+ * @n: largest number of bytes to append
+ *
+ * Return: address of dest
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	int i, j;
+
+	i = j = 0;
+	while (*(dest + i))
+		i++;
+	while (j < n && *(src + j))
 	{
-		dest[i] = src[i];
+		*(dest + i) = *(src + j);
+		i++;
+		j++;
 	}
+	if (j < n)
+		*(dest + i) = *(src + j);
 	return (dest);
 }
