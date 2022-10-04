@@ -1,51 +1,40 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * print_grid - prints a grid of integers
- * @grid: the address of the two dimensional grid
- * @width: width of the grid
- * @height: height of the grid
+ * argstostr - concatenates all the arguments of your program.
+ * @ac: number of arguments
+ * @av: double pointer to arguments
  *
- * Return: Nothing.
+ * Return:pointer to new string, or NULL if error
  */
-void print_grid(int **grid, int width, int height)
+char *argstostr(int ac, char **av)
 {
-	int w;
-	int h;
+	int i, j, k = 0, n = 0;
+	char *s;
 
-	h = 0;
-	while (h < height)
+	if (ac <= 0 || av == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
 	{
-		w = 0;
-		while (w < width)
+		for (j = 0; av[i][j]; j++)
+			n++;
+		n++;
+	}
+	n++;
+	s = malloc(n * sizeof(char));
+	if (s == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++)
 		{
-			printf("%d ", grid[h][w]);
-			w++;
+			s[k] = av[i][j];
+			k++;
 		}
-		printf("\n");
-		h++;
+		s[k] = '\n';
+		k++;
 	}
+	s[k] = '\0';
+	return (s);
 }
-
-/**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int **grid;
-
-	grid = alloc_grid(6, 4);
-	if (grid == NULL)
-	{
-		return (1);
-	}
-	print_grid(grid, 6, 4);
-	printf("\n");
-	grid[0][3] = 98;
-	grid[3][4] = 402;
-	print_grid(grid, 6, 4);
-	return (0);
